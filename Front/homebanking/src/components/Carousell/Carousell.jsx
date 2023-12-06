@@ -61,10 +61,8 @@ const MyCarousel = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
+                  
+                    Somos tu aliado financiero, comprometidos en brindarte seguridad, confianza y soluciones que impulsan tus metas. ¡Bienvenido a PILLARBANK donde tu éxito es nuestra prioridad!"
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem>
@@ -77,10 +75,7 @@ const MyCarousel = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
+                En PIllARBAK, nos dedicamos a ofrecer servicios financieros integrales para satisfacer tus necesidades. Desde cuentas de ahorro hasta préstamos y asesoría personalizada, trabajamos incansablemente para ser tu socio confiable en el camino hacia tus metas financieras.
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem>
@@ -93,10 +88,7 @@ const MyCarousel = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
+                Nos comprometemos a ofrecerte una experiencia financiera excepcional. Destacamos por nuestra transparencia, servicio personalizado y una amplia gama de productos diseñados para impulsar tu bienestar financiero. Tu confianza es nuestra prioridad, y estamos aquí para ser tu socio en cada paso de tu camino.
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem>
@@ -109,10 +101,7 @@ const MyCarousel = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
+                En PILLARBANK, nuestra visión es ser líderes en la transformación financiera, brindando soluciones innovadoras que empoderen a nuestros clientes. Nos comprometemos a proporcionar servicios bancarios eficientes, accesibles y personalizados. Nuestra propuesta se centra en la excelencia, la tecnología avanzada y el compromiso con la comunidad, trabajando juntos para construir un futuro financiero sólido y exitoso para todos.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -136,3 +125,4 @@ const MyCarousel = () => {
 };
 
 export default MyCarousel;
+  
