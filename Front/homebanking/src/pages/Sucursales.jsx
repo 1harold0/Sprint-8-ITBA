@@ -1,66 +1,48 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Heading,
-  Stack,
-  StackDivider,
-  Box,
-  Text,
-} from "@chakra-ui/react";
+import React from 'react';
+import { Card, CardHeader, CardBody, Heading, Stack, Box, Text, StackDivider,Table, Thead, Tr, Th, Tbody, Td } from 
+'@chakra-ui/react';
 
-export default function Sucursales() {
-
-  //Esta página por el momento se encuentra hardcodeada
-  //Está pensada para que los usuarios válidos puedan ver su información y editarla si asi lo quisiesen.
-
-  return (
-    <Card maxWidth="400px" m="auto" height="70%" mt="5%" shadow="dark-lg">
-      <CardHeader>
-        <Heading size="lg" textAlign="center">
-          Nuestras Sucursales
-        </Heading>
-      </CardHeader>
-      <CardBody marginTop="28px">
-        <Stack divider={<StackDivider />} spacing="2.5" marginTop="-2rem">
-          <Box>
-            <Heading size="xs">Sucursal N°023</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-          <Box>
-            <Heading size="xs">Sucursal N°231</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-          <Box>
-            <Heading size="xs">Sucursal N°765</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-          <Box>
-            <Heading size="xs">Sucursal N°007</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-          <Box>
-            <Heading size="xs">Sucursal N°123</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-          <Box>
-            <Heading size="xs">Sucursal N°468</Heading>
-            <Text fontSize="sm">
-              Direccion: 
-            </Text>
-          </Box>
-        </Stack>
-      </CardBody>
-    </Card>
-  );
+//aca es donde pone lorenzo el usestate de sucursal
+const sucursalesData = [
+  { numero: '023', direccion: 'AV. SAN MARTIN 3381',  nombre :'belgrano',provincia :'buenos  ires',ciudad:'cordoba' },
+  { numero: '231', direccion: 'AV. J.B.ALBERDI 6367', nombre :'moreno',provincia :'merlo',ciudad:'mendoza'},
+  { numero: '765', direccion: 'AV. SANTA FE 1450',    nombre :'pepito',provincia :'un lugar  feliz',ciudad:'weednas' },
+  { numero: '007', direccion: 'ECHEANDIA 2602',       nombre :'cordoba',provincia :'chaco',ciudad:'buenos aires' },
+  { numero: '123', direccion: 'AV. JAURETCHE 1576',   nombre :'urquiza',provincia :'patagonia',ciudad:'' },
+  { numero: '468', direccion: 'CALLE 16 N 550',       nombre :'palermo',provincia :'buenos aires',ciudad:'buenos aires' },
+];
+const SucursalesPage = () => {
+return (
+  <Card maxWidth="800px" m="auto" mt="5%" shadow>
+    <CardHeader>
+      <Heading size="lg" textAlign="center">
+        Nuestras Sucursales
+      </Heading>
+    </CardHeader>
+    <CardBody marginTop="28px">
+      <Table variant="striped" colorScheme="teal" size="sm">
+        <Thead>
+          <Tr>
+            <Th>Sucursal</Th>
+            <Th>Dirección</Th>
+            <Th>Ciudad</Th>
+            <Th>Provincia</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {sucursalesData.map((sucursal) => (
+            <Tr key={sucursal.numero}>
+              <Td>{sucursal.numero}</Td>
+              <Td>{sucursal.direccion}</Td>
+              <Td>{sucursal.ciudad}</Td>
+              <Td>{sucursal.provincia}</Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </CardBody>
+  </Card>
+);
 }
+
+export default SucursalesPage;

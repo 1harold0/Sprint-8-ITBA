@@ -52,7 +52,7 @@ const routes = [
       },
       {
         path: "sucursales",
-        element: <Sucursales />,
+        element: <Sucursales/>,
       },
       {
         path: "prestamos",
