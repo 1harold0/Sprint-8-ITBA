@@ -14,6 +14,7 @@ import {
     AlertIcon,
     AlertTitle,
     HStack,
+    VStack
   } from "@chakra-ui/react";
   
   import { useState } from "react";
@@ -68,45 +69,45 @@ import {
     const handleRegister = (e) => {
       e.preventDefault();
     };
-  
     return (
-      <Box my={8} textAlign="left">
+      <Box my={8} textAlign="left" maxWidth="500px" mx="auto">
         <form onSubmit={handleRegister}>
-          <FormControl isRequired>
-            <FormLabel>DNI</FormLabel>
-            <Input
-              type="dni"
-              placeholder="Escribe tu DNI"
-              value={dni}
-              onChange={(e) => setDni(e.target.value)}
-            ></Input>
-          </FormControl>
-          <FormControl isRequired>
-            <FormLabel>Cantidad</FormLabel>
-            <Input
-              type="cantidadPrestamo"
-              placeholder="Escribi tu nombre de Cantidad"
-              value={cantidadPrestamo}
-              onChange={(e) => setcantidadPrestamo(e.target.value)}
-            ></Input>
-          </FormControl>
-          <FormControl isRequired>
-            <FormLabel>Tipo Cliente</FormLabel>
-            <Input
-              type="tipoCliente"
-              placeholder="Escribi tu Tipo Cliente"
-              value={tipoCliente}
-              onChange={(e) => settipoCliente(e.target.value)}
-            ></Input>
-          </FormControl>
+          <VStack spacing={4}>
+            <FormControl isRequired>
+              <FormLabel>DNI</FormLabel>
+              <Input
+                type="dni"
+                placeholder="Escribe tu DNI"
+                value={dni}
+                onChange={(e) => setDni(e.target.value)}
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Cantidad</FormLabel>
+              <Input
+                type="cantidadPrestamo"
+                placeholder="ingrese el monto"
+                value={cantidadPrestamo}
+                onChange={(e) => setCantidadPrestamo(e.target.value)}
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Tipo Cliente</FormLabel>
+              <Input
+                type="tipoCliente"
+                placeholder="Escribe tu tipo de cliente"
+                value={tipoCliente}
+                onChange={(e) => setTipoCliente(e.target.value)}
+              />
+            </FormControl>
+          </VStack>
   
-          <HStack justifyContent="space-between" mt={4}>
+          <HStack justifyContent="flex-end" mt={4}>
+            <Button bg="#d4af37" type="submit">
+              Solicitar
+            </Button>
           </HStack>
-          <Button bg="#d4af37" width="full" mt="4" type="submit">
-            Solicitar
-          </Button>
         </form>
       </Box>
     );
-  }
-  
+  };

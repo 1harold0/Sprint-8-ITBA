@@ -8,18 +8,18 @@ import {
   CardFooter,
 } from "@chakra-ui/react";
 
-export default function TransferenciaCard({name}) {
+export default function TransferenciaCard({ name }) {
   return (
-    <>
-      <Card maxH="180px" boxShadow="dark-lg">
-        <CardHeader textAlign="center">
-          <Avatar name={name} />
-        </CardHeader>
-        <Text textAlign="center">{name}</Text>
-        <CardFooter>
-          <Button bg="#d4af37">Transferir</Button>
-        </CardFooter>
-      </Card>
-    </>
+    <Card maxW={{ base: "300px", md: "400px" }} mx="auto" boxShadow="dark-lg">
+      <CardHeader textAlign="center">
+        <Avatar name={name} />
+      </CardHeader>
+      <Text textAlign="center" fontSize={{ base: "sm", md: "md" }}>
+        {name}
+      </Text>
+      <CardFooter justifyContent="center">
+        <Button bg="#d4af37">Transferir</Button>
+      </CardFooter>
+    </Card>
   );
 }

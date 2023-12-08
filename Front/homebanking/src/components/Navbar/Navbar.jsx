@@ -8,20 +8,25 @@ import logo from "./logo.png";
 const Navbar = () => {
   return (
     <>
-    <Box bg="#129490" p={4} color="black">
-      <Flex>
-        <Box alignItems="center" display="flex">
-          <Image src={logo} alt="Logo" w={16} h={16} mr={2} />
-          <Link as={RouterLink} to="/home" fontSize="40" fontWeight="bold">
-            PillarBank
-          </Link>
-        </Box>
-        <Spacer />
-        <Box alignItems="center" display="flex">
-          <DropdownMenu />
-        </Box>
-      </Flex>
-    </Box>
+      <Box bg="#129490" p={4} color="black">
+        <Flex direction={{ base: "column", md: "row" }} align="center">
+          <Box mb={{ base: 4, md: 0 }} flex="1" display="flex" alignItems="center">
+            <Image src={logo} alt="Logo" w={16} h={16} mr={2} />
+            <Link
+              as={RouterLink}
+              to="/home"
+              fontSize={{ base: "24px", md: "40px" }}
+              fontWeight="bold"
+            >
+              PillarBank
+            </Link>
+          </Box>
+          <Spacer />
+          <Box>
+            <DropdownMenu />
+          </Box>
+        </Flex>
+      </Box>
       <Outlet />
     </>
   );

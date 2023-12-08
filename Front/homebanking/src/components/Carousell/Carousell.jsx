@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, Text, Button, Accordion, AccordionIcon, AccordionButton, AccordionItem, AccordionPanel } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Text, Button, Accordion, AccordionIcon, AccordionButton, AccordionItem, AccordionPanel,isLargerThan768 } from "@chakra-ui/react";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -44,9 +44,19 @@ const MyCarousel = () => {
   const {isLogged} = useAuth();
 
   return (
-    <Grid templateColumns='repeat(2, 1fr)' gap={6} align="center" justifyContent={"center"}>
-        <GridItem textAlign='center' mt='5rem'>
-            <Heading textAlign='center' mt={20} fontSize={50} mb={5}>
+    <Grid
+      templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+      gap={6}
+      align="center"
+      justifyContent="center"
+    >
+      <GridItem textAlign="center" mt={{ base: "5rem", md: "0" }}>
+        <Heading
+          textAlign="center"
+          mt={{ base: 20, md: 0 }}
+          fontSize={{ base: "2xl", md: "4xl" }}
+          mb={5}
+        >
                 Bienvenido a PILLARBANK
             </Heading>
             <br />
@@ -105,16 +115,20 @@ const MyCarousel = () => {
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
-            {isLogged ? null : <Link to='/login'><Button mt="20" w="200px" bg="#d4af37">Ingresá</Button></Link>}
+            {isLogged ? null : <Link to='/login'><Button mt={{ base: "20px", md: "0" }}
+              w={{ base: "full", md: "200px" }}
+              bg="#d4af37">Ingresá</Button></Link>}
         </GridItem>
-      <GridItem w="45rem" textAlign="center" mt={20}>
+      <GridItem w={{ base: "100%", "45rem" : "100%" }}
+        textAlign="center"
+        mt={{ base: 20, md: 0 }}>
         <Carousel autoPlay interval={4000} infiniteLoop>
           {images.map((image, index) => (
             <div key={index}>
               <img
                 src={image.url}
                 alt={image.alt}
-                style={{ width: image.width }}
+                style={{ width:"100%"}}
               />
             </div>
           ))}
